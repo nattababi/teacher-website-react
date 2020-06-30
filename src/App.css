@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+	font-size : 12pt;
+	margin-left : 5%;
+	margin-right : 7%;
+	font-family: univers,times,fantasy,verdana,arial,helvetica;
+	color : #35311E;
+	background : #D9C8A8
+}
+
+.BoldItalic {
+
+}
+
+#rcorners2 {
+  border-radius: 15px;
+  border: 2px solid #808000;
+  padding: 10px;
+  width: 140px;
+  height: 15px;
+}
