@@ -1,7 +1,19 @@
 import React, { Component } from 'react';
+import { getPage } from '../services/pageService';
 
 class Teacher extends Component {
+  state = {
+    text: ""
+  };
+
+  async componentDidMount() {
+    let page = await getPage("teacher");
+    console.log('Coming value', page.text)
+    this.setState({ text: page.text });
+  }
+
   render() {
+    //{this.state.text}
     return (
       <div style={{ fontFamily: "univers", fontStyle: "italic" }}>
         <p>
@@ -51,19 +63,19 @@ class Teacher extends Component {
         <div>
           Могу оторваться.
         </div>
-        <img src="images/olia/8.jpg" alt="" border="0"/>
+        <img src="images/olia/8.jpg" alt="" border="0" />
 
         <div>
           Могу!
         </div>
-        <img src="images/olia/9.jpg" alt="" border="0"/>
+        <img src="images/olia/9.jpg" alt="" border="0" />
 
 
         <audio controls autoPlay hidden>
           <source src="sounds/bender.mp3" type="audio/mpeg" />
         </audio>
 
-          
+
       </div >
     );
   }
