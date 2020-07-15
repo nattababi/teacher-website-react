@@ -9,6 +9,7 @@ import Findus from './components/findus';
 import Gallery from './components/gallery';
 import Navbar from './components/navbar.jsx';
 import Main from './components/main.jsx';
+import DtTweets from './components/dtTweets';
 import { Link } from 'react-router-dom';
 import './App.css';
 
@@ -37,6 +38,7 @@ function App() {
           <Route path="/apartments" component={Apartments} />
           <Route path="/findus" component={Findus} />
           <Route path="/gallery" component={Gallery} />
+          <Route path="/dtTweets" component={DtTweets} />
           <Route exact path="/" component={Main} />
         </div>
       </div>

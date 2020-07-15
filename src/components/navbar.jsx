@@ -18,6 +18,7 @@ class Navbar extends Component {
         <FunnyButton to="apartments">Апартаменты</FunnyButton>
         <FunnyButton to="findus">Найди нас</FunnyButton>
         <FunnyButton to="gallery">Галерея</FunnyButton>
+        <FunnyButton to="dtTweets">Donald Trump Tweets</FunnyButton>
       </div>
     );
   }
