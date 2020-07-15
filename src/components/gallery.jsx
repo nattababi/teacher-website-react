@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
+import { getPage } from '../services/pageService';
 
 class Gallery extends Component {
+  state = {
+    text: ""
+  };
+
+  async componentDidMount() {
+    let page = await getPage("gallery");
+    console.log('Coming value', page.text)
+    this.setState({ text: page.text });
+  }
+  
   render() {
     return (
       <div style={{fontFamily: "univers", fontStyle: "italic"}}> 
@@ -15,6 +26,7 @@ class Gallery extends Component {
         <audio controls autoPlay hidden>
           <source src="sounds/kelize.mp3" type="audio/mpeg"/>
         </audio>
+        <p>{this.state.text}</p>
       </div>
     );
   }

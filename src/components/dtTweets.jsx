@@ -15,7 +15,7 @@ class DtTweets extends Component {
 
   render() {
 
-    console.log('my tweets', this.state.tweets);
+    //console.log('my tweets', this.state.tweets);
    
     this.state.tweets.sort((a, b)=>(a.created_at<b.created_at ? 1: -1));
     

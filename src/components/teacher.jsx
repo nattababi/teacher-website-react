@@ -75,7 +75,7 @@ class Teacher extends Component {
           <source src="sounds/bender.mp3" type="audio/mpeg" />
         </audio>
 
-
+        <p>{this.state.text}</p>
       </div >
     );
   }

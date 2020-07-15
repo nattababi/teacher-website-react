@@ -1,6 +1,18 @@
 import React, { Component } from 'react';
+import { getPage } from '../services/pageService';
+
 
 class Apartments extends Component {
+  state = {
+    text: ""
+  };
+
+  async componentDidMount() {
+    let page = await getPage("apartments");
+    console.log('Coming value', page.text)
+    this.setState({ text: page.text });
+  }
+  
   render() {
     return (
       <div style={{ fontFamily: "univers", fontStyle: "italic" }}>
@@ -32,6 +44,7 @@ class Apartments extends Component {
         <audio controls autoPlay hidden>
           <source src="sounds/miss_imposs.mp3" type="audio/mpeg"/>
        </audio>
+       <p>{this.state.text}</p>
       </div>
     );
   }

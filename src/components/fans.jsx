@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { getPage } from '../services/pageService';
 
 class Fans extends Component {
+  state = {
+    text: ""
+  };
+
+  async componentDidMount() {
+    let page = await getPage("fans");
+    console.log('Coming value', page.text)
+    this.setState({ text: page.text });
+  }
+  
   render() {
     return (
       <div style={{ fontFamily: "univers", fontStyle: "italic" }}>
@@ -19,6 +30,7 @@ class Fans extends Component {
         <audio controls autoPlay hidden>
           <source src="sounds/ihaly_kozaki.mp3" type="audio/mpeg" />
         </audio>
+        <p>{this.state.text}</p>
       </div>
     );
   }

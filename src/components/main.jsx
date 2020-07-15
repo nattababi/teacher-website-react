@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
+import { getPage } from '../services/pageService';
 
 class Main extends Component {
+  state = {
+    text: ""
+  };
+
+  async componentDidMount() {
+    let page = await getPage("main");
+    console.log('Coming value', page.text)
+    this.setState({ text: page.text });
+  }
+  
   render() {
     return (
       <div style={{fontFamily: "univers", fontStyle: "italic"}}>
@@ -25,6 +36,8 @@ class Main extends Component {
         <p>
           Внеси свою лепту в будущее всей Беларуси!
         </p>
+
+        <p>{this.state.text}</p>
       </div>
     );
   }
