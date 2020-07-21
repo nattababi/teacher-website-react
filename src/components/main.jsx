@@ -7,7 +7,9 @@ class Main extends Component {
   };
 
   async componentDidMount() {
+    console.log('before call');
     let page = await getPage("main");
+    console.log('after call');
     console.log('Coming value', page.text)
     this.setState({ text: page.text });
   }
