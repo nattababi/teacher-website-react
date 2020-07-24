@@ -15,12 +15,8 @@ class DtTweets extends Component {
 
   render() {
 
-    //console.log('my tweets', this.state.tweets);
-   
-    this.state.tweets.sort((a, b)=>(a.created_at<b.created_at ? 1: -1));
-    
     return (
-      <div style={{ fontFamily: "Helvetica Neue"}}>
+      <div style={{ fontFamily: "Helvetica Neue" }}>
         <div>Here go tweet of our famous president!</div>
         {this.state.tweets.map(element => <p>{element.submitted_at} {element.message}</p>)}
       </div>
