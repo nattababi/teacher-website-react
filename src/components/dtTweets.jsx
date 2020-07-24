@@ -17,7 +17,7 @@ class DtTweets extends Component {
 
     return (
       <div style={{ fontFamily: "Helvetica Neue" }}>
-        <div>Here go tweet of our famous president!</div>
+        <p>Here go tweet of our famous president!</p>
         {this.state.tweets.map(element => <p>{element.submitted_at} {element.message}</p>)}
       </div>
     );
