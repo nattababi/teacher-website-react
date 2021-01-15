@@ -1,7 +1,8 @@
 import axios from "axios";
 
-//axios.defaults.baseURL = process.env.TWITTER_API_URL;
-let TWEETS_API_URL = "https://gentle-cliffs-74029.herokuapp.com/api/";
+axios.defaults.baseURL = process.env.TWITTER_API_URL;
+let TWEETS_API_URL = "https://pacific-eyrie-79907.herokuapp.com/api/";
+//let TWEETS_API_URL = "http://localhost:3900/api/";
 
 axios.interceptors.response.use(null, error => {
   const expectedError =

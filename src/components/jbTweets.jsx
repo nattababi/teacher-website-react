@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { getTweets } from '../services/tweetService';
 
-class DtTweets extends Component {
+class JbTweets extends Component {
 
   state = {
     tweets: []
@@ -17,11 +17,11 @@ class DtTweets extends Component {
 
     return (
       <div style={{ fontFamily: "Helvetica Neue" }}>
-        <p><b>Here are tweets of our famous president!</b></p>
+        <p><b>Here are tweets of Joe Biden!</b></p>
         {this.state.tweets.map(element => <p>{element.submitted_at} {element.message}</p>)}
       </div>
     );
   }
 }
 
-export default DtTweets
+export default JbTweets;
